@@ -23,7 +23,7 @@ export default function PortfolioLanding() {
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
 
-    const roles = ["FullStack Developer.", "IoT Enthusiast.", "Embedded-C Programmer.", "CAD Designer.", "Video Editor."];
+    const roles = ["FullStack Developer.", "IoT Enthusiast.", "Embedded-C Programmer.", "CAD Designer."];
 
     useEffect(() => {
         const handleTyping = () => {
@@ -110,7 +110,6 @@ export default function PortfolioLanding() {
         width: isMobile ? 92 : 140,
         height: isMobile ? 92 : 140,
         borderRadius: "50%",
-        background: colors.circleDark,
         color: "#fff",
         display: "flex",
         alignItems: "center",
@@ -118,8 +117,16 @@ export default function PortfolioLanding() {
         fontSize: isMobile ? 28 : 40,
         fontWeight: 800,
         boxShadow: "0 12px 30px rgba(10,12,15,0.12)",
-        border: "6px solid rgba(255,255,255,0.9)",
+        border: "4px solid #000000",
         marginBottom: isMobile ? "10px" : "30px",
+        overflow: "hidden",
+    };
+
+    const badgeImage = {
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
     };
 
     const nameStyle = {
@@ -187,7 +194,9 @@ export default function PortfolioLanding() {
             </header>
 
             <main style={heroWrap}>
-                <div style={badge}>JS</div>
+                <div style={badge}>
+                    <img src="./src/assets/myphotov2.jpg" alt="Profile photo" style={badgeImage} />
+                </div>
                 <h1 style={nameStyle}>Hello there, I'm Kiruthick.</h1>
                 <div style={subtitle}>
                     I'm an <span style={{ color: colors.textDark, fontWeight: 700 }}>{text}</span>
