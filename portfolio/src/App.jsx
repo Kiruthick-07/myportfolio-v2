@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Landing from './components/Landing'
+import About from './components/About'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <Landing/>
-      
+      <About />
     </>
   )
 }
