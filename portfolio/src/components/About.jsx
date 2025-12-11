@@ -122,11 +122,12 @@ export default function AboutPage() {
                     {/* Left column: bio */}
                     <div style={leftCol}>
                         <p>
-                            I'm a passionate full-stack developer with over <strong>5 years</strong>
-                            of experience creating digital solutions that blend functionality
-                            with beautiful design. My journey began with a curiosity about how
-                            things work and evolved into a career dedicated to building
-                            exceptional user experiences.
+                            Entry-level Software Engineer skilled in the MERN
+                            stack with a strong engineering foundation. Focused
+                            on building scalable, user-centric web applications
+                            using React, Node.js, and modern JavaScript. Eager
+                            to contribute to a collaborative development team
+                            with strong problem-solving skills.
                         </p>
 
                         <div style={spacer} />

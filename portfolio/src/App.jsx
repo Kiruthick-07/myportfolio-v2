@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Landing from './components/Landing'
 import About from './components/About'
+import Skills from './components/Skills.jsx'
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <Landing/>
       <About />
+      <Skills />
     </>
   )
 }
