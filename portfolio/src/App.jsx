@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Landing from './components/Landing'
 import About from './components/About'
 import Skills from './components/Skills.jsx'
+import Projects from './components/Projects.jsx'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Landing/>
       <About />
       <Skills />
+      <Projects />
     </>
   )
 }
