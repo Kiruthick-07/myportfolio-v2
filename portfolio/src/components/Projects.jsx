@@ -84,17 +84,38 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
+      title: 'Codebase Desktop IDE',
+      description: 'Code Base Electron App is a cross-platform desktop IDE built with Electron to organize codesnippets and manage programming resources.',
       image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      technologies: ['React', 'Electron', 'Monacco Editor.']
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, team collaboration features, and intuitive drag-and-drop interface.',
-      image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop',
-      technologies: ['Vue.js', 'Express', 'MongoDB', 'Socket.io'],
+      title: 'Department COE Website',
+      description: 'A professional portfolio website for the COE department showcasing achievements, projects,faculty profiles, and departmental activities.',
+      image: './assets/coe.png',
+      technologies: ['React.js','Node-Mailer','Lottie Animations'],
+    },
+    {
+      id:3,
+      title: 'Quiz-Force Full Stack Application',
+      description : 'Quiz Force is a lightweight, user-friendly quiz app designed to enhance learning with fast,interactive questions, smart scoring with role based login.',
+      image:'',
+      technologies: ['React.js','Node.js','Express.js','Mongo DB'],
+    },
+    {
+      id:4,
+      title: 'Hostel Website',
+      description : 'Developed an full stack website for an hostel as an freelancer using MERN Stack including payment gateway and Mail functionality.',
+      image : '',
+      technologies: ['HTML','CSS','JS','Mongo DB','RazorPay','NodeMailer'],
+    },
+    {
+      id:5,
+      title: 'File Encryptor & Decryptor',
+      description : 'File Encryptor is a secure, lightweight tool that protects sensitive files using strong encryption, offering an easy interface for fast encrypting, decrypting, and safe file management.',
+      image : '',
+      technologies: ['HTML','CSS','SpringBoot'],
     },
   ];
 
