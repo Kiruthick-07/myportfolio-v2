@@ -1,4 +1,5 @@
 import React from 'react';
+import coeImage from '../assets/coe.png';
 
 const FeaturedProjects = () => {
   const styles = {
@@ -79,6 +80,22 @@ const FeaturedProjects = () => {
       color: '#333',
       fontWeight: '500',
     },
+    visitButton: {
+      marginTop: '20px',
+      padding: '8px 16px',
+      backgroundColor: '#1a1a1a',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '8px',
+      fontSize: 'clamp(14px, 1.8vw, 16px)',
+      fontWeight: '600',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      width: '30%',
+      textDecoration: 'none',
+      display: 'inline-block',
+      textAlign: 'center',
+    },
   };
 
   const projects = [
@@ -87,35 +104,40 @@ const FeaturedProjects = () => {
       title: 'Codebase Desktop IDE',
       description: 'Code Base Electron App is a cross-platform desktop IDE built with Electron to organize codesnippets and manage programming resources.',
       image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-      technologies: ['React', 'Electron', 'Monacco Editor.']
+      technologies: ['React', 'Electron', 'Monacco Editor.'],
+      link: 'https://github.com/Kiruthick-07/Code-Base-Electron-App.git'
     },
     {
       id: 2,
       title: 'Department COE Website',
       description: 'A professional portfolio website for the COE department showcasing achievements, projects,faculty profiles, and departmental activities.',
-      image: './assets/coe.png',
-      technologies: ['React.js','Node-Mailer','Lottie Animations'],
+      image: coeImage,
+      technologies: ['React.js', 'Node-Mailer', 'Lottie Animations'],
+      link: 'https://mts-coe.vercel.app/'
     },
     {
-      id:3,
+      id: 3,
       title: 'Quiz-Force Full Stack Application',
-      description : 'Quiz Force is a lightweight, user-friendly quiz app designed to enhance learning with fast,interactive questions, smart scoring with role based login.',
-      image:'',
-      technologies: ['React.js','Node.js','Express.js','Mongo DB'],
+      description: 'Quiz Force is a lightweight, user-friendly quiz app designed to enhance learning with fast,interactive questions, smart scoring with role based login.',
+      image: '',
+      technologies: ['React.js', 'Node.js', 'Express.js', 'Mongo DB'],
+      link: '#'
     },
     {
-      id:4,
+      id: 4,
       title: 'Hostel Website',
-      description : 'Developed an full stack website for an hostel as an freelancer using MERN Stack including payment gateway and Mail functionality.',
-      image : '',
-      technologies: ['HTML','CSS','JS','Mongo DB','RazorPay','NodeMailer'],
+      description: 'Developed an full stack website for an hostel as an freelancer using MERN Stack including payment gateway and Mail functionality.',
+      image: '',
+      technologies: ['HTML', 'CSS', 'JS', 'Mongo DB', 'RazorPay', 'NodeMailer'],
+      link: '#'
     },
     {
-      id:5,
+      id: 5,
       title: 'File Encryptor & Decryptor',
-      description : 'File Encryptor is a secure, lightweight tool that protects sensitive files using strong encryption, offering an easy interface for fast encrypting, decrypting, and safe file management.',
-      image : '',
-      technologies: ['HTML','CSS','SpringBoot'],
+      description: 'File Encryptor is a secure, lightweight tool that protects sensitive files using strong encryption, offering an easy interface for fast encrypting, decrypting, and safe file management.',
+      image: '',
+      technologies: ['HTML', 'CSS', 'SpringBoot'],
+      link: '#'
     },
   ];
 
@@ -157,6 +179,24 @@ const FeaturedProjects = () => {
                   </span>
                 ))}
               </div>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={styles.visitButton}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#333';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#1a1a1a';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                Visit Project
+              </a>
             </div>
           </div>
         ))}

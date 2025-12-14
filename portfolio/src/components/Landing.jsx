@@ -6,7 +6,6 @@ export default function PortfolioLanding() {
     useEffect(() => {
         const onResize = () => setWidth(window.innerWidth);
         window.addEventListener("resize", onResize);
-        // inject a subtle font-family hint
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap";
@@ -17,7 +16,7 @@ export default function PortfolioLanding() {
         };
     }, []);
 
-    // Typewriter effect state
+    
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
@@ -214,7 +213,7 @@ export default function PortfolioLanding() {
                 </div>
 
                 <div style={socials}>
-                    <a style={socialBtn} className="social-btn" href="#" aria-label="GitHub">
+                    <a style={socialBtn} className="social-btn" href="https://github.com/Kiruthick-07" aria-label="GitHub">
                         <svg viewBox="0 0 24 24" style={socialIcon} xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.43 9.77 8.2 11.36.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.74.08-.74 1.21.09 1.85 1.25 1.85 1.25 1.08 1.86 2.82 1.33 3.51 1.02.11-.8.42-1.33.76-1.64-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013.01-.41c1.02.01 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.8 5.61-5.47 5.9.43.37.81 1.11.81 2.24 0 1.62-.015 2.92-.015 3.32 0 .32.21.69.82.57C20.57 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z" />
                         </svg>
