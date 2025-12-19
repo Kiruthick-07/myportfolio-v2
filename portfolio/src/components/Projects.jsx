@@ -1,5 +1,10 @@
 import React from 'react';
 import coeImage from '../assets/coe.png';
+import ideImage from '../assets/ide.png';
+import quizImage from'../assets/quizforce.png';
+import hostelImage from '../assets/hostel.png';
+import encryptor from '../assets/encryptorImage.png';
+import appImage from '../assets/app.png';
 
 const FeaturedProjects = () => {
   const styles = {
@@ -103,7 +108,7 @@ const FeaturedProjects = () => {
       id: 1,
       title: 'Codebase Desktop IDE',
       description: 'Code Base Electron App is a cross-platform desktop IDE built with Electron to organize codesnippets and manage programming resources.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+      image: ideImage,
       technologies: ['React', 'Electron', 'Monacco Editor.'],
       link: 'https://github.com/Kiruthick-07/Code-Base-Electron-App.git'
     },
@@ -119,26 +124,34 @@ const FeaturedProjects = () => {
       id: 3,
       title: 'Quiz-Force Full Stack Application',
       description: 'Quiz Force is a lightweight, user-friendly quiz app designed to enhance learning with fast,interactive questions, smart scoring with role based login.',
-      image: '',
+      image: quizImage,
       technologies: ['React.js', 'Node.js', 'Express.js', 'Mongo DB'],
-      link: '#'
+      link: 'https://github.com/Kiruthick-07/Quiz-Force.git'
     },
     {
       id: 4,
       title: 'Hostel Website',
       description: 'Developed an full stack website for an hostel as an freelancer using MERN Stack including payment gateway and Mail functionality.',
-      image: '',
+      image: hostelImage,
       technologies: ['HTML', 'CSS', 'JS', 'Mongo DB', 'RazorPay', 'NodeMailer'],
-      link: '#'
+      link: 'https://kiruthick-07.github.io/Mangai_Girls_Hostel_Portfolio/'
     },
     {
       id: 5,
       title: 'File Encryptor & Decryptor',
       description: 'File Encryptor is a secure, lightweight tool that protects sensitive files using strong encryption, offering an easy interface for fast encrypting, decrypting, and safe file management.',
-      image: '',
+      image: encryptor,
       technologies: ['HTML', 'CSS', 'SpringBoot'],
-      link: '#'
+      link: 'https://github.com/Kiruthick-07/FileEncryptorApp.git'
     },
+    {
+      id: 6,
+      title: 'Speed Math Trainer App',
+      description: 'Speed Math Trainer is a lightweight, user-friendly app designed to enhance learning with fast,interactive questions, smart scoring with role based login.',
+      image: appImage,
+      technologies: ['React.js', 'Node.js', 'Express.js', 'Mongo DB'],
+      link: 'https://expo.dev/artifacts/eas/gwyGuefZC5QKpd36ZDoWjG.apk'
+    }
   ];
 
   return (
