@@ -221,7 +221,7 @@ const Contact = () => {
                             </div>
                             <div style={{ flex: 1 }}>
                                 <h3 style={contactTitle}>Email</h3>
-                                <p style={contactText}>kiruthick.developer@gmail.com</p>
+                                <p style={contactText}>rkiruthick55@gmail.com</p>
                             </div>
                         </div>
 
@@ -243,7 +243,7 @@ const Contact = () => {
                             </div>
                             <div style={{ flex: 1 }}>
                                 <h3 style={contactTitle}>Phone</h3>
-                                <p style={contactText}>+91 9876543210</p>
+                                <p style={contactText}>+91 9597424158</p>
                             </div>
                         </div>
 
@@ -266,7 +266,7 @@ const Contact = () => {
                             </div>
                             <div style={{ flex: 1 }}>
                                 <h3 style={contactTitle}>Location</h3>
-                                <p style={contactText}>Chennai, Tamil Nadu, India</p>
+                                <p style={contactText}>Erode, Tamil Nadu, India</p>
                             </div>
                         </div>
 

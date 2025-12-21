@@ -271,15 +271,15 @@ const Footer = () => {
                         <h3 style={columnTitle}>Get In Touch</h3>
                         <p style={columnText}>
                             <strong style={{ color: "#fff" }}>Email:</strong><br />
-                            kiruthick.developer@gmail.com
+                            rkiruthick55@gmail.com
                         </p>
                         <p style={columnText}>
                             <strong style={{ color: "#fff" }}>Phone:</strong><br />
-                            +91 9876543210
+                            +91 9597424158
                         </p>
                         <p style={columnText}>
                             <strong style={{ color: "#fff" }}>Location:</strong><br />
-                            Chennai, Tamil Nadu, India
+                            Erode, Tamil Nadu, India
                         </p>
                     </div>
                 </div>
@@ -289,32 +289,7 @@ const Footer = () => {
                     <p style={copyright}>
                         © {new Date().getFullYear()} Kiruthick. All rights reserved.
                     </p>
-                    <div style={bottomLinks}>
-                        <a
-                            href="#privacy"
-                            style={bottomLink}
-                            onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-                            onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                        >
-                            Privacy Policy
-                        </a>
-                        <a
-                            href="#terms"
-                            style={bottomLink}
-                            onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-                            onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                        >
-                            Terms of Service
-                        </a>
-                        <a
-                            href="#sitemap"
-                            style={bottomLink}
-                            onMouseEnter={(e) => e.currentTarget.style.color = "#ffffff"}
-                            onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                        >
-                            Sitemap
-                        </a>
-                    </div>
+                        
                 </div>
             </div>
         </footer>
