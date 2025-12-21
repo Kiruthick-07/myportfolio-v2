@@ -9,8 +9,12 @@ import appImage from '../assets/app.png';
 const FeaturedProjects = () => {
   const styles = {
     container: {
-      backgroundColor: '#f5f5f5',
-      padding: '60px 20px',
+      color: "#16202b",
+        padding: "40px 20px",
+        background: `radial-gradient(circle, rgba(0,0,0,0.08) 02px, transparent 1px), linear-gradient(180deg, #fafafa 0%, #ffffff 100%)`,
+        backgroundSize: "32px 32px, 100% 100%",
+        minHeight: "100vh",
+        boxSizing: "border-box",
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     },
     heading: {

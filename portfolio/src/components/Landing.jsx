@@ -2,21 +2,28 @@ import React, { useEffect, useState } from "react";
 
 export default function PortfolioLanding() {
     const [width, setWidth] = useState(window.innerWidth);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const onResize = () => setWidth(window.innerWidth);
+        const onScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
         window.addEventListener("resize", onResize);
+        window.addEventListener("scroll", onScroll);
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap";
         document.head.appendChild(link);
         return () => {
             window.removeEventListener("resize", onResize);
+            window.removeEventListener("scroll", onScroll);
             document.head.removeChild(link);
         };
     }, []);
 
-    
+
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
@@ -69,16 +76,31 @@ export default function PortfolioLanding() {
         alignItems: "center",
         fontFamily: 'Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
         color: colors.textDark,
-        padding: isMobile ? "20px 16px" : "36px 80px",
+        padding: isMobile ? "80px 16px 20px" : "120px 80px 36px",
         boxSizing: "border-box",
     };
 
     const header = {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: isMobile ? "18px" : "40px",
+        padding: isMobile ? "16px 20px" : "20px 80px",
+        marginBottom: 0,
+        zIndex: 1000,
+        transition: "all 0.3s ease",
+        background: isScrolled
+            ? "rgba(246, 246, 246, 0.7)"
+            : "transparent",
+        backdropFilter: isScrolled ? "blur(12px)" : "none",
+        WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
+        boxShadow: isScrolled
+            ? "0 2px 20px rgba(0, 0, 0, 0.08)"
+            : "none",
     };
 
     const brand = {
