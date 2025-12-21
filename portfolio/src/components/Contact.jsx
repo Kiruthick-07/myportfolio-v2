@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [isMobile, setIsMobile] = useState(() =>
@@ -13,6 +14,7 @@ const Contact = () => {
     });
 
     const [formStatus, setFormStatus] = useState('');
+    const [isLoading, setIsLoading] = useState(false); // Loading state for form submission
 
     useEffect(() => {
         function onResize() {
@@ -31,10 +33,35 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your form submission logic here
-        setFormStatus('Message sent successfully! I\'ll get back to you soon.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setFormStatus(''), 5000);
+        setIsLoading(true);
+        setFormStatus('');
+
+
+        const serviceID = 'service_0eb02du';
+        const templateID = 'template_f15fr9g';
+        const publicKey = 'x3EhzBWLL0F_P_yGI';
+
+        // Send email using EmailJS
+        emailjs.send(serviceID, templateID, {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            to_email: 'rkiruthick55@gmail.com',
+        }, publicKey)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setFormStatus('Message sent successfully! I\'ll get back to you soon.');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setIsLoading(false);
+                setTimeout(() => setFormStatus(''), 5000);
+            })
+            .catch((error) => {
+                console.error('FAILED...', error);
+                setFormStatus('Failed to send message. Please try again or email me directly.');
+                setIsLoading(false);
+                setTimeout(() => setFormStatus(''), 5000);
+            });
     };
 
     const page = {
@@ -360,17 +387,24 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    style={button}
+                                    disabled={isLoading}
+                                    style={{
+                                        ...button,
+                                        opacity: isLoading ? 0.7 : 1,
+                                        cursor: isLoading ? 'not-allowed' : 'pointer',
+                                    }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-2px)';
-                                        e.currentTarget.style.boxShadow = '0 6px 16px rgba(11,18,32,0.3)';
+                                        if (!isLoading) {
+                                            e.currentTarget.style.transform = 'translateY(-2px)';
+                                            e.currentTarget.style.boxShadow = '0 6px 16px rgba(11,18,32,0.3)';
+                                        }
                                     }}
                                     onMouseLeave={(e) => {
                                         e.currentTarget.style.transform = 'translateY(0)';
                                         e.currentTarget.style.boxShadow = '0 4px 12px rgba(11,18,32,0.2)';
                                     }}
                                 >
-                                    Send Message
+                                    {isLoading ? 'Sending...' : 'Send Message'}
                                 </button>
 
                                 {formStatus && (

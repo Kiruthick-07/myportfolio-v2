@@ -150,7 +150,7 @@ const Footer = () => {
                             </a>
 
                             <a
-                                href="https://linkedin.com/in/kiruthick"
+                                href="https://www.linkedin.com/in/kiruthick-r-%E2%9A%A1-803291293/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={socialBtn}
@@ -170,7 +170,7 @@ const Footer = () => {
                             </a>
 
                             <a
-                                href="mailto:kiruthick.developer@gmail.com"
+                                href="mailto:rkiruthick55@gmail.com"
                                 style={socialBtn}
                                 onMouseEnter={(e) => {
                                     e.currentTarget.style.background = "rgba(255,255,255,0.2)";
@@ -187,25 +187,6 @@ const Footer = () => {
                                 </svg>
                             </a>
 
-                            <a
-                                href="https://twitter.com/kiruthick"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={socialBtn}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-                                    e.currentTarget.style.transform = "translateY(-3px)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-                                    e.currentTarget.style.transform = "translateY(0)";
-                                }}
-                                aria-label="Twitter"
-                            >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                                </svg>
-                            </a>
                         </div>
                     </div>
 
