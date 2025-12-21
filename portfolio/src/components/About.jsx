@@ -14,7 +14,7 @@ export default function AboutPage() {
         return () => window.removeEventListener("resize", onResize);
     }, []);
 
-    
+
     const page = {
         fontFamily:
             "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
@@ -111,7 +111,7 @@ export default function AboutPage() {
 
     // ---------- CONTENT ----------
     return (
-        <div style={page}>
+        <div style={page} id="about">
             <div style={container}>
                 <header style={titleWrap}>
                     <h1 style={title}>About Me</h1>

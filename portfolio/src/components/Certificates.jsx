@@ -90,7 +90,7 @@ const Certificates = () => {
   ];
 
   return (
-    <div style={container}>
+    <div style={container} id="certificates">
       <div style={heading}>Certificates</div>
       <div style={underline}></div>
       <div style={certContainer}>

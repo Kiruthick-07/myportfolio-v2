@@ -106,13 +106,13 @@ const SkillsExpertise = () => {
   const technologies = [
     'React', 'Vue.js', 'Node.js', 'Express',
     'MongoDB', 'PostgreSQL', 'HTML', 'CSS',
-    'JavaScript','Flask','Python','java',
-    'Git', 'Python', 'Figma','Photoshop',
-    'PremierPro','AfterEffects'
+    'JavaScript', 'Flask', 'Python', 'java',
+    'Git', 'Python', 'Figma', 'Photoshop',
+    'PremierPro', 'AfterEffects'
   ];
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} id="skills">
       <h2 style={styles.heading}>Skills & Expertise</h2>
       <div style={styles.underline}></div>
       <p style={styles.subtitle}>

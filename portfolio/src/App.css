@@ -1,4 +1,26 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   padding: 0px;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link:visited {
+  color: inherit;
+}
+
+.nav-link:hover {
+  color: inherit;
+}
+
+.nav-link:active {
+  color: inherit;
 }

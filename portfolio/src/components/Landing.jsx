@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 export default function PortfolioLanding() {
     const [width, setWidth] = useState(window.innerWidth);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const onResize = () => setWidth(window.innerWidth);
@@ -89,7 +90,7 @@ export default function PortfolioLanding() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: isMobile ? "16px 20px" : "20px 80px",
+        padding: isMobile ? "16px 20px" : "20px 60px",
         marginBottom: 0,
         zIndex: 1000,
         transition: "all 0.3s ease",
@@ -101,6 +102,7 @@ export default function PortfolioLanding() {
         boxShadow: isScrolled
             ? "0 2px 20px rgba(0, 0, 0, 0.08)"
             : "none",
+        boxSizing: "border-box",
     };
 
     const brand = {
@@ -110,10 +112,19 @@ export default function PortfolioLanding() {
 
     const nav = {
         display: isMobile ? "none" : "flex",
-        gap: "28px",
+        gap: "20px",
         alignItems: "center",
         color: colors.muted,
-        fontSize: "16px",
+        fontSize: "15px",
+        flexShrink: 0,
+        textDecoration: "none",
+    };
+
+    const navLink = {
+        textDecoration: "none",
+        color: colors.muted,
+        cursor: "pointer",
+        transition: "color 0.3s ease",
     };
 
     const heroWrap = {
@@ -200,18 +211,148 @@ export default function PortfolioLanding() {
         fill: "white",
     };
 
+    const hamburger = {
+        display: isMobile ? "flex" : "none",
+        flexDirection: "column",
+        gap: "5px",
+        cursor: "pointer",
+        zIndex: 1001,
+    };
+
+    const hamburgerLine = {
+        width: "25px",
+        height: "3px",
+        background: colors.textDark,
+        borderRadius: "2px",
+        transition: "all 0.3s ease",
+    };
+
+    const mobileMenu = {
+        position: "fixed",
+        top: 0,
+        right: isMobileMenuOpen ? 0 : "-100%",
+        width: "70%",
+        height: "100vh",
+        background: "rgba(255, 255, 255, 0.98)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        boxShadow: "-4px 0 20px rgba(0, 0, 0, 0.1)",
+        padding: "80px 30px 30px",
+        transition: "right 0.3s ease",
+        zIndex: 1000,
+        display: "flex",
+        flexDirection: "column",
+        gap: "24px",
+    };
+
+    const mobileMenuOverlay = {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100vh",
+        background: "rgba(0, 0, 0, 0.5)",
+        display: isMobileMenuOpen ? "block" : "none",
+        zIndex: 999,
+        transition: "opacity 0.3s ease",
+    };
+
+    const mobileNavLink = {
+        fontSize: "18px",
+        fontWeight: 600,
+        color: colors.textDark,
+        padding: "12px 0",
+        borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+        cursor: "pointer",
+        textDecoration: "none",
+        display: "block",
+    };
+
     return (
-        <div style={container}>
+        <div style={container} id="home">
+            {/* Mobile Menu Overlay */}
+            <div
+                style={mobileMenuOverlay}
+                onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Mobile Menu */}
+            <div style={mobileMenu}>
+                <a
+                    href="#home"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    Home
+                </a>
+                <a
+                    href="#about"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    About
+                </a>
+                <a
+                    href="#skills"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    Skills
+                </a>
+                <a
+                    href="#projects"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    Projects
+                </a>
+                <a
+                    href="#certificates"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    Certificates
+                </a>
+                <a
+                    href="#contact"
+                    style={mobileNavLink}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
+                    Contact
+                </a>
+            </div>
+
             <header style={header}>
                 <div style={brand}>Portfolio</div>
+
+                {/* Desktop Navigation */}
                 <nav style={nav}>
-                    <div className="nav-link">Home</div>
-                    <div className="nav-link">About</div>
-                    <div className="nav-link">Skills</div>
-                    <div className="nav-link">Projects</div>
-                    <div className="nav-link">Certificates</div>
-                    <div className="nav-link">Contact</div>
+                    <a href="#home" className="nav-link" style={navLink}>Home</a>
+                    <a href="#about" className="nav-link" style={navLink}>About</a>
+                    <a href="#skills" className="nav-link" style={navLink}>Skills</a>
+                    <a href="#projects" className="nav-link" style={navLink}>Projects</a>
+                    <a href="#certificates" className="nav-link" style={navLink}>Certificates</a>
+                    <a href="#contact" className="nav-link" style={navLink}>Contact</a>
                 </nav>
+
+                {/* Hamburger Menu Button */}
+                <div
+                    style={hamburger}
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <div style={{
+                        ...hamburgerLine,
+                        transform: isMobileMenuOpen ? "rotate(45deg) translateY(8px)" : "none",
+                    }} />
+                    <div style={{
+                        ...hamburgerLine,
+                        opacity: isMobileMenuOpen ? 0 : 1,
+                    }} />
+                    <div style={{
+                        ...hamburgerLine,
+                        transform: isMobileMenuOpen ? "rotate(-45deg) translateY(-8px)" : "none",
+                    }} />
+                </div>
             </header>
 
             <main style={heroWrap}>
@@ -254,39 +395,6 @@ export default function PortfolioLanding() {
                     </a>
                 </div>
             </main>
-
-            {/* Mobile bottom nav */}
-            {isMobile && (
-                <div
-                    style={{
-                        width: "100%",
-                        position: "fixed",
-                        bottom: 14,
-                        left: 0,
-                        display: "flex",
-                        justifyContent: "center",
-                        pointerEvents: "none",
-                    }}
-                >
-                    <div
-                        style={{
-                            background: "rgba(255,255,255,0.6)",
-                            padding: "8px 18px",
-                            borderRadius: 40,
-                            boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-                            pointerEvents: "auto",
-                        }}
-                    >
-                        <div style={{ display: "flex", gap: 14, color: colors.muted }}>
-                            <div className="nav-link">Home</div>
-                            <div className="nav-link">About</div>
-                            <div className="nav-link">Skills</div>
-                            <div className="nav-link">Projects</div>
-                            <div className="nav-link">Contact</div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }
