@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import myphotov2 from "../assets/myphotov2.jpg";
 
 export default function PortfolioLanding() {
     const [width, setWidth] = useState(window.innerWidth);
@@ -357,7 +358,7 @@ export default function PortfolioLanding() {
 
             <main style={heroWrap}>
                 <div style={badge}>
-                    <img src="./src/assets/myphotov2.jpg" alt="Profile photo" style={badgeImage} />
+                    <img src={myphotov2} alt="Profile photo" style={badgeImage} />
                 </div>
                 <h1 style={nameStyle}>Hello there, I'm Kiruthick.</h1>
                 <div style={subtitle}>
