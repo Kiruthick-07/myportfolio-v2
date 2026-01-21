@@ -373,7 +373,7 @@ export default function PortfolioLanding() {
 
                 <div style={{ marginTop: "10px", marginBottom: "10px", display: "flex", justifyContent: "center" }}>
                     <a href="#contact" className="btn btn-primary">Contact Me</a>
-                    <a href="https://drive.google.com/file/d/1h1E3DPuWArhx_WJ1dh1sXQUyHTZzLUV-/view?usp=sharing" className="btn btn-secondary">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1h1E3DPuWArhx_WJ1dh1sXQUyHTZzLUV-/view?usp=sharing" target="blank" className="btn btn-secondary" >Download CV</a>
                 </div>
 
                 <div style={socials}>
